@@ -31,5 +31,5 @@ function Item({item, index, borrarItem, completarItem}) {
 
     
   }
-
+//{estado === "no completado" && <Buton ....>}
 export default Item;

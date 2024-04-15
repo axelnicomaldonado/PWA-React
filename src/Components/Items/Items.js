@@ -6,14 +6,14 @@ function Items({items, setItems}) {
   function borrarItem(index){
     let arreglo = items
     arreglo.splice(index, 1)
-    setItems(arreglo)
+    setItems([...arreglo])
     console.log(items)
   }
 
   function completarItem(index){
     let arreglo = items
     arreglo[index].estado = 'completado'
-    setItems(arreglo)
+    setItems([...arreglo])
     console.log(items)
   }
 
