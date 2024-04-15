@@ -1,6 +1,6 @@
-import 'styles.css';
+import './styles.css';
 
-function AddItem() {
+function AddItem(setItems) {
     return (
       <div className="AddItem">
         <header className="AddItem-header">
