@@ -14,7 +14,8 @@ function Home() {
       <div className="Home">
         <header className="Home-header">
           <Title/>
-          <AddItem setItems={setItems}/>
+          
+          <AddItem items={items} setItems={setItems}/>
           <Items items={items} setItems={setItems}/>
         </header>
       </div>
