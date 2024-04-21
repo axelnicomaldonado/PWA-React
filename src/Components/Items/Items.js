@@ -19,12 +19,10 @@ function Items({items, setItems}) {
 
     return (
       <div className="Items">
-        <header className="Items-header">
           {items.map(function(item, index) {
             return (
             <Item item={item} index={index} borrarItem={borrarItem} completarItem={completarItem}/>)
           })}
-        </header>
       </div>
     );
   }
