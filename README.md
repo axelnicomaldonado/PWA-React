@@ -29,3 +29,19 @@ de un navegador.
 ### `package-json.js`
 Guarda las dependencias de la aplicación necesarias para ejecutarse
 de forma correcta.
+
+## Instrucciones
+• Clonar el repositorio desde la terminal:
+
+![instruccion1](./src/Images/screenshot1.png)
+
+• Ejecutar el comando `npm install` para instalar las dependencias.
+
+![instruccion2](./src/Images/screenshot2.png)
+Es necesario tener node.js instalado. Se puede descargar desde nodejs.org
+
+• Ejecutar el comando `npm start` para iniciar la aplicación.
+
+![instruccion3](./src/Images/screenshot3.png)
+Se puede acceder escribiendo localhost:3000 en el navegador.
+
