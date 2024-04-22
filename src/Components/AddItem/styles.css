@@ -1,8 +1,5 @@
 .AddItem{
     background: grey;
-    position: fixed;
-    left: 0;
-    margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
 }

@@ -18,7 +18,9 @@ function Items({items, setItems}) {
   }
 
     return (
+
       <div className="Items">
+   
           {items.map(function(item, index) {
             return (
             <Item item={item} index={index} borrarItem={borrarItem} completarItem={completarItem}/>)

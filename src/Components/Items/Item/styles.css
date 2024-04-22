@@ -1,9 +1,8 @@
 .Item{
-    float: left;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
+    min-width: 200px;
+    min-height: 200px;
     text-align: center;
+
 }
 
 .ItemCompletado{
