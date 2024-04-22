@@ -6,21 +6,32 @@ import Search from '../../Components/Search/Search.js'
 import {useState} from 'react'
 
 function Home() {
-  const arregloDePrueba = [{ nombre: 'tarea1', estado: "no completado" }, { nombre: 'tarea2', estado: "completado" }]
-  const [items, setItems] = useState(arregloDePrueba)
+
+  const [items, setItems] = useState([])
   const [searchResults, setSearchResults] = useState(items)
 
   return (
     <div className="Home">
-      <header className="Home-header">
+
         <div className='tituloContainer'>
         <Title/>
         </div>
 
-        <Search items={items} setSearchResults={setSearchResults} />
-        <AddItem items={items} setItems={setItems} />
+        <div className="row">
+    <div className="col">
+      <Search items={items} setSearchResults={setSearchResults} />
+    </div>
+    <div className="col">
+      <AddItem items={items} setItems={setItems} />
+    </div>
+  </div>
+        <div className='itemsContainer'>
+
+       
         <Items items={searchResults} setItems={setItems} />
-      </header>
+
+        </div>
+
     </div>
   );
 }

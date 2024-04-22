@@ -19,13 +19,18 @@ function Items({items, setItems}) {
 
     return (
 
-      <div className="Items">
    
-          {items.map(function(item, index) {
-            return (
-            <Item item={item} index={index} borrarItem={borrarItem} completarItem={completarItem}/>)
-          })}
+<div className="Items row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+  {items.map(function(item, index) {
+    return (
+      <div key={index} className="col">
+        <div className='cardContainer mx-auto my-2'> {/* Añade la clase my-2 para un margen vertical de 0.5rem (equivalente a 1em) en la parte superior e inferior */}
+          <Item item={item} index={index} borrarItem={borrarItem} completarItem={completarItem}/>
+        </div>
       </div>
+    );
+  })}
+</div>
     );
   }
 

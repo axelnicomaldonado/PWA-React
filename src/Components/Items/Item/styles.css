@@ -1,17 +1,17 @@
 .Item{
-    min-width: 200px;
-    min-height: 200px;
+width: 10em;
+    min-height: 10em;
     text-align: center;
+    background-color: transparent;
 
 }
 
-.ItemCompletado{
-
-
-    background-color: green;
-
+.botones {
+    position: absolute;
+    right: .5em;
+    bottom: .5em;
 }
-
-.ItemNoCompletado{
-    background-color: blue;
+.nombreTarea{
+    font-size: 1.3em;
+    word-break: break-word;
 }

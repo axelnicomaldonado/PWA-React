@@ -10,15 +10,19 @@ function AddItem({ items, setItems }) {
   }
 
   return (
-    <div className="AddItem">
-      <header className="AddItem-header">
-        <form id="form" onSubmit={agregar}>
-          <label htmlFor="task">Nombre de la tarea</label><br/>
-          <input type="text" id="task" />
-          <input type="submit" name="Agregar tarea" />
-        </form>
-      </header>
-    </div>
+<div className="AddItem">
+
+    <form id="form" className="form-inline" onSubmit={agregar}>
+      <div className="row align-items-start">
+        <div className="col">
+          <input type="text" id="task" placeholder='Agregar una tarea..' className="form-control" />
+        </div>
+        <div className="col-auto"> {/* Esta columna ocupa el ancho mínimo necesario */}
+          <input type="submit" value="Agregar" className="btn btn-primary" name="Agregar tarea" />
+        </div>
+      </div>
+    </form>
+</div>
   );
 }
 

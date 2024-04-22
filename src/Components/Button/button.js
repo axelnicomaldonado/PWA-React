@@ -1,12 +1,10 @@
-import './styles.css';
+import "./styles.css";
 
-function Button({texto, onClick}) {
+function Button({ color, texto, onClick }) {
   return (
-    <div className="Button">
-      <header className="Button-header">
-        <button onClick={onClick}>{texto}</button>
-      </header>
-    </div>
+    <div class="d-grid gap-2 d-md-block">
+      <button className={"btn btn-" + color } type="button" onClick={onClick}>{texto}</button>
+      </div>
   );
 }
 
