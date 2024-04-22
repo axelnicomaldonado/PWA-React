@@ -13,7 +13,6 @@ function Home() {
     return (
       <div className="Home">
         <header className="Home-header">
-          <Title/>
           
           <AddItem items={items} setItems={setItems}/>
           <Items items={items} setItems={setItems}/>

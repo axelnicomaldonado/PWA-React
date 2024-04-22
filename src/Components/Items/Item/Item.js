@@ -8,22 +8,22 @@ function Item({item, index, borrarItem, completarItem}) {
 
     if(estado === "completado"){
         return (
+          <div className='Item'>
             <div className="ItemCompletado">
-              <header className="Item-header">
                   <Button texto="X" onClick={() => borrarItem(index)}/>
                   <h3>{nombre}</h3>
-              </header>
             </div>
+          </div>
           )
     } else if(estado === "no completado"){
         return (
+          <div className='Item'>
             <div className="ItemNoCompletado">
-              <header className="Item-header">
                 <Button texto="X" onClick={() => borrarItem(index)}/>
                 <h3>{nombre}</h3>
-                <Button texto="completar" onClick={() => completarItem(index)}/>  
-              </header>
+                <Button texto="completar" onClick={() => completarItem(index)}/>
             </div>
+          </div>
           )
     } else{
         return "error"

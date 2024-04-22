@@ -4,7 +4,7 @@ function Title() {
     return (
       <div className="Title">
         <header className="Title-header">
-          <p> titulo </p>
+          <p> To do list/TP React </p>
         </header>
       </div>
     );

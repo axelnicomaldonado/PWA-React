@@ -1,11 +1,18 @@
-div{
-
+.Item{
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    text-align: center;
 }
 
 .ItemCompletado{
 
+
+    background-color: green;
+
 }
 
 .ItemNoCompletado{
-    
+    background-color: blue;
 }
