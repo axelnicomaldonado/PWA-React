@@ -1,5 +1,5 @@
 import './styles.css';
-import Item from './Item/Item.js';
+import Item from './Item/Item.jsx';
 
 function Items({items, setItems}) {
 
