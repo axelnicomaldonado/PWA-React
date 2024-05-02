@@ -1,5 +1,5 @@
 import "./styles.css";
-import Button from "../../Button/button.js";
+import Button from "../../Button/Button.js";
 
 function Item({ item, index, borrarItem, completarItem }) {
   let nombre = item.nombre;
