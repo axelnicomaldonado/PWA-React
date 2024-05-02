@@ -5,7 +5,7 @@ function Item({ item, index, borrarItem, completarItem }) {
   let nombre = item.nombre;
   let estado = item.estado;
 
-  if (estado === "completado") {
+  if (estado === true) {
     return (
       <div className="Item card border-success mb-3 bg-transparent d-flex flex-column justify-content-center align-items-center position-relative">
         <div className="card-body text-success">
@@ -23,7 +23,7 @@ function Item({ item, index, borrarItem, completarItem }) {
         </div>
       </div>
     );
-  } else if (estado === "no completado") {
+  } else if (estado === false) {
     return (
       <div className="Item card border-danger mb-3 bg-transparent d-flex flex-column justify-content-center align-items-center position-relative">
         <div className="card-body text-danger">

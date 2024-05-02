@@ -4,7 +4,7 @@ function AddItem({ items, setItems }) {
   function agregar(event) {
     event.preventDefault(); // Evitar que el formulario se envíe automáticamente
     const nombreTarea = document.getElementById("task").value;
-    const tarea = { nombre: nombreTarea, estado: "no completado" };
+    const tarea = { nombre: nombreTarea, estado: false };
     const newArray = items? [...items, tarea] : [tarea];  //Si items tiene objetos, 
     setItems(newArray);
   }

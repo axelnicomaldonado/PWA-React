@@ -25,10 +25,12 @@ function Home() {
   const [items, setItems] = useState([]);
   const [searchResults, setSearchResults] = useState(items);
 
+  let texto = "To do list/React TP"
+
   return (
     <div className="Home">
       <div className="tituloContainer">
-        <Title />
+        <Title texto={texto}/>
       </div>
 
       <div className="row">

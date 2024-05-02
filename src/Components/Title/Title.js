@@ -1,10 +1,10 @@
 import './styles.css';
 
-function Title() {
+function Title({texto}) {
     return (
       <div className="Title">
         <header className="Title-header">
-          <p> To do list/TP React </p>
+          <p> {texto} </p>
         </header>
       </div>
     );

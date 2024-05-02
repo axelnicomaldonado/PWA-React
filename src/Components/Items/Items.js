@@ -7,19 +7,17 @@ function Items({items, setItems}) {
     let arreglo = items
     arreglo.splice(index, 1)
     setItems([...arreglo])
-    console.log(items)
   }
 
   function completarItem(index){
     let arreglo = items
-    arreglo[index].estado = 'completado'
+    arreglo[index].estado = true
     setItems([...arreglo])
-    console.log(items)
   }
 
-    return (
-
-   
+    if(items.length == 0) {
+      return (<h2>No hay tareas pendientes</h2>)
+    } else return (
 <div className="Items row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
   {items.map(function(item, index) {
     return (
@@ -33,5 +31,4 @@ function Items({items, setItems}) {
 </div>
     );
   }
-
 export default Items;

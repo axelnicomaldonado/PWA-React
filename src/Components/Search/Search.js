@@ -1,4 +1,3 @@
-import style from "./styles.css";
 import { useEffect, useState } from "react";
 
 const Search = ({ items, setSearchResults }) => {
