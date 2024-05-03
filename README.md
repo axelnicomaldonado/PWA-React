@@ -6,6 +6,8 @@ El objetivo es crear una aplicación que sirva como anotador
 de una lista de tareas, permitiendo que el usuario agregue tareas,
 las marque como completadas y pueda eliminarlas.
 
+![todolist](./src/Images/todolist.jpg)
+
 ## Integrantes:
 Nicolás Maldonado FAI-3196
 
