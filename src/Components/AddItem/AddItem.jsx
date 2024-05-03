@@ -1,10 +1,12 @@
 function AddItem({ items, setItems }) {
   function agregar(event) {
     event.preventDefault();
+    //const id = (items.length - 1) //agregar id para usarlo en vez del index
     const nombreTarea = document.getElementById("task").value;
-    const tarea = { nombre: nombreTarea, estado: false };
+    const tarea = { nombre: nombreTarea, estado: false};
     const newArray = items? [...items, tarea] : [tarea];
     setItems(newArray);
+    document.getElementById("task").value = "";
   }
 
   return (

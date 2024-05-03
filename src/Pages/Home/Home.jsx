@@ -21,9 +21,30 @@ import { useState } from "react";
 //Podrian agregar algunas imagenes de como se ve la aplicacion corriendo al readme?
 //Intenten instalar prettier o algun identador automatico para que el codigo quede mas ordenado y facil de leer.
 
+
+
+
+
+
+
 function Home() {
   const [items, setItems] = useState([]);
   const [searchResults, setSearchResults] = useState(items);
+
+  const hayNoCompletado = items.some(item => item.estado === false);
+
+  console.log(hayNoCompletado)
+
+  var mensaje = "";
+  if(items.length == 0){
+    mensaje = "No hay tareas disponibles."
+  } else if(items.length > 0 && !hayNoCompletado){
+     mensaje = "Todas las tareas estan completas."
+  } else {
+     mensaje = "";
+  }
+  
+
 
   let texto = "To do list/React TP"
 
@@ -42,7 +63,7 @@ function Home() {
         </div>
       </div>
       <div className="itemsContainer">
-        <Items items={searchResults} setItems={setItems} />
+        <Items results={searchResults} items= {items} setItems={setItems} mensaje={mensaje}  />
       </div>
     </div>
   );

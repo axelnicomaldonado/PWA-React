@@ -17,17 +17,14 @@ const Search = ({ items, setSearchResults }) => {
   };
 
   return (
-    //El div no es necesario
-    <div>
       <input
         value={search}
         onChange={searcher}
         type="text"
         placeholder="Buscar..."
         className="form-control"
-        //Intenten hacer self-close cuando sea posible --> />
+        //Intenten hacer self-close cuando sea posible --> HACER SELF CLOSE (Boton para borrar busqueda creo) /> 
       ></input>
-    </div>
   );
 };
 
