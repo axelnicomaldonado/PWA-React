@@ -1,4 +1,4 @@
-import "./styles.css";
+import style from "./styles.css";
 import Title from "../../Components/Title/Title.jsx";
 import AddItem from "../../Components/AddItem/AddItem.jsx";
 import Items from "../../Components/Items/Items.jsx";
@@ -33,24 +33,20 @@ function Home() {
 
   const hayNoCompletado = items.some(item => item.estado === false);
 
-  console.log(hayNoCompletado)
+ // console.log(hayNoCompletado)
 
   var mensaje = "";
   if(items.length == 0){
     mensaje = "No hay tareas disponibles."
   } else if(items.length > 0 && !hayNoCompletado){
-     mensaje = "Todas las tareas estan completas."
-  } else {
-     mensaje = "";
+    mensaje = "Todas las tareas estan completas."
   }
-  
-
 
   let texto = "To do list/React TP"
 
   return (
-    <div className="Home">
-      <div className="tituloContainer">
+    <div className={style.Home}>
+      <div className={style.tituloContainer}>
         <Title texto={texto}/>
       </div>
 
@@ -62,7 +58,7 @@ function Home() {
           <AddItem items={items} setItems={setItems} />
         </div>
       </div>
-      <div className="itemsContainer">
+      <div className={style.itemsContainer}>
         <Items results={searchResults} items= {items} setItems={setItems} mensaje={mensaje}  />
       </div>
     </div>

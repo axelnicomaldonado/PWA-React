@@ -18,7 +18,7 @@ function Items({ items, setItems, mensaje, results }) {
   return (
     <div>
       <h2>{mensaje}</h2>
-      <div className="Items row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div className="Items row row-cols-1 row-cols-sm-2 g-3">
         {results.map(function (item, index) {
           return (
             <div key={index} className="col">

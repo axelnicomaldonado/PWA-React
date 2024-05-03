@@ -6,10 +6,10 @@ function Item({ item, index, borrarItem, completarItem }) {
   let estado = item.estado;
   let color;
 
-  if(estado === false){
-    color = 'danger';
-  } else {
+  if(estado){
     color = 'success';
+  } else {
+    color = 'danger';
   }
   let divBootstrapBorder = "Item card border-" + color + " mb-3 bg-transparent d-flex flex-column justify-content-center align-items-center position-relative"
   let divBootstrapText = "card-body text-" + color
@@ -20,7 +20,7 @@ function Item({ item, index, borrarItem, completarItem }) {
           <p className="card-text nombreTarea">{nombre}</p>
         </div>
         <div className="d-flex align-items-end botones">
-        {estado === false &&
+        {!estado &&
           <div className="me-2">
             <Button
               className="completar"
