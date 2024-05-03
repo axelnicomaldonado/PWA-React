@@ -1,5 +1,3 @@
-import "./styles.css";
-
 function Button({ color, texto, onClick }) {
   return (
     <div class="d-grid gap-2 d-md-block">

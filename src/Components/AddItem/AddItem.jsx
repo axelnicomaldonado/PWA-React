@@ -1,16 +1,14 @@
-import './styles.css';
-
 function AddItem({ items, setItems }) {
   function agregar(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+    event.preventDefault();
     const nombreTarea = document.getElementById("task").value;
     const tarea = { nombre: nombreTarea, estado: false };
-    const newArray = items? [...items, tarea] : [tarea];  //Si items tiene objetos, 
+    const newArray = items? [...items, tarea] : [tarea];
     setItems(newArray);
   }
 
   return (
-<div className="AddItem">
+<div>
 
     <form id="form" className="form-inline" onSubmit={agregar}>
       <div className="row align-items-start">
