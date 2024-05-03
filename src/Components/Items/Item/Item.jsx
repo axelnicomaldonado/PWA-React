@@ -4,32 +4,23 @@ import Button from "../../Button/Button.jsx";
 function Item({ item, index, borrarItem, completarItem }) {
   let nombre = item.nombre;
   let estado = item.estado;
+  let color;
 
-  if (estado === true) {
-    return (
-      <div className="Item card border-success mb-3 bg-transparent d-flex flex-column justify-content-center align-items-center position-relative">
-        <div className="card-body text-success">
-          <p className="card-text nombreTarea">{nombre}</p>
-        </div>
+  if(estado === false){
+    color = 'danger';
+  } else {
+    color = 'success';
+  }
+  let divBootstrapBorder = "Item card border-" + color + " mb-3 bg-transparent d-flex flex-column justify-content-center align-items-center position-relative"
+  let divBootstrapText = "card-body text-" + color
 
-        <div className="d-flex align-items-start botones">
-          <Button
-            color="danger"
-            type="button"
-            texto="Eliminar"
-            onClick={() => borrarItem(index)}
-            className="mt-1"
-          />
-        </div>
-      </div>
-    );
-  } else if (estado === false) {
     return (
-      <div className="Item card border-danger mb-3 bg-transparent d-flex flex-column justify-content-center align-items-center position-relative">
-        <div className="card-body text-danger">
+      <div className={divBootstrapBorder}>
+        <div className={divBootstrapText}>
           <p className="card-text nombreTarea">{nombre}</p>
         </div>
         <div className="d-flex align-items-end botones">
+        {estado === false &&
           <div className="me-2">
             <Button
               className="completar"
@@ -38,6 +29,7 @@ function Item({ item, index, borrarItem, completarItem }) {
               onClick={() => completarItem(index)}
             />
           </div>
+        }
           <div className="ms-auto">
             <Button
               color="danger"
@@ -50,9 +42,5 @@ function Item({ item, index, borrarItem, completarItem }) {
         </div>
       </div>
     );
-  } else {
-    return "error";
-  }
 }
-//{estado === "no completado" && <Buton ....>}
 export default Item;
